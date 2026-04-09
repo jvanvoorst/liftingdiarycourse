@@ -116,6 +116,26 @@ export async function createWorkout(input: CreateWorkoutInput) {
 }
 ```
 
+## Redirects
+
+**Never call `redirect()` inside a server action.**
+
+Redirects must be handled client-side after the server action resolves:
+
+```ts
+// ✅ Correct — redirect in the client component
+async function handleSubmit() {
+  await createWorkout(input);
+  router.push("/dashboard");
+}
+
+// ❌ Wrong — redirect inside the server action
+export async function createWorkout(input: CreateWorkoutInput) {
+  await insertWorkout(...);
+  redirect("/dashboard"); // never do this
+}
+```
+
 ## Summary
 
 | Rule | Requirement |
