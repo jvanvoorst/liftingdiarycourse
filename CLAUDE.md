@@ -4,7 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## IMPORTANT: Docs-First Rule
 
-**Before generating any code, Claude Code MUST first read the relevant documentation file in the `/docs` directory.** Every feature, route, component, or concept in this project has a corresponding doc. Always locate and read the relevant `/docs` file before writing or modifying any code.
+**Before generating any code, Claude Code MUST first read the relevant documentation file in the `/docs` directory.** Every feature, route, component, or concept in this project has a corresponding doc. Always locate and read the relevant `/docs` file before writing or modifying any code:
+
+- /docs/ui.md
+- /docs/data-fetching.md
 
 ## Commands
 
